@@ -1,0 +1,33 @@
+<li [ngClass]="{'list-group-item' : true,
+                 'list-group-item-success': post.loveIts > 0,
+                 'list-group-item-danger': post.loveIts < 0,
+                 'list-group-item-neutre':post.loveIts == 0 }">
+    <div class="float-left postHearder">{{post.title}}</div>
+    <div class="float-right postHearder postInfos">{{post.created_at | date: 'short' }}</div>
+
+    <div class="postBody">
+        <p>{{post.content}}</p>
+        <div class="postVotes">
+            <button style="margin:2px;"
+                type="button" 
+                class="btn btn-success" 
+                (click)="onLoveItClick()">
+                Love it!
+            </button>
+            <button style="margin:2px;"
+                type="button"
+                class="btn btn-info"
+                [disabled]="true">
+                <span *ngIf="post.loveIts>0">+</span>{{post.loveIts}}
+            </button>
+            <button style="margin:2px;" 
+                type="button" 
+                class="btn btn-danger" 
+                (click)="onDontLoveItClick()">
+                Don't love it!
+            </button>
+            <button class="float-right btn btn-warning" (click)="onDelete()">Supprimer</button>
+        </div>
+        
+    </div>
+</li>

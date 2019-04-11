@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+$main-blue:#343a40;
+$main-gray:lightgray;
+
+.list{
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+}
+
+.postHearder{
+    font-weight: 1000;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.postBody{
+    padding: 10px;
+    margin-top:34px; 
+    text-align:left;
+    background-color: $main-gray ;
+    border-radius: 5px;
+}
+
+.postInfos{
+    font-weight: 600;    
+    background-color: $main-blue;
+    text-decoration: none;
+    color: white;
+}
+
+.postVotes{
+    margin-top: 20px;
+}
+
+nav li{
+    margin-left:20px;
+    margin-right:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+a .linkButton, a:hover .linkButton, nav li a, nav li a:hover{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pageBody{
+    text-align: left;
+    overflow: visible;
+    margin-top: 150px;
+}
+
+.pageHeader{
+    background-color: $main-blue ;
+}
+
+.list-group-item-neutre{
+    background-color: #99caff ;
+    color:#007bff;
+}
